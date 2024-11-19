@@ -1,0 +1,38 @@
+﻿@model CRMSystem.ViewModels.ClientViewModel
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Address"></label>
+        <input asp-for="Address" />
+    </div>
+    <div>
+        <label asp-for="City"></label>
+        <input asp-for="City" />
+    </div>
+    <div>
+        <label asp-for="Country"></label>
+        <input asp-for="Country" />
+    </div>
+    <div>
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" />
+    </div>
+    <div>
+        <label asp-for="HomePage"></label>
+        <input asp-for="HomePage" />
+    </div>
+    <div>
+        <label asp-for="Extension"></label>
+        <input asp-for="Extension" />
+    </div>
+    <button type="submit">Save</button>
+</form>

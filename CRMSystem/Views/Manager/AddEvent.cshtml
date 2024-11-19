@@ -1,0 +1,30 @@
+﻿@model CRMSystem.ViewModels.EventViewModel
+
+<form asp-action="AddEvent">
+    <input type="hidden" asp-for="ClientId" />
+    <div>
+        <label asp-for="Type"></label>
+        <select asp-for="Type">
+            <option value="Встреча">Встреча</option>
+            <option value="Звонок">Звонок</option>
+            <option value="Договор">Договор</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for="Result"></label>
+        <input asp-for="Result" />
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+    <div>
+        <label asp-for="FollowUpOption"></label>
+        <select asp-for="FollowUpOption">
+            <option value="Перезвонить">Перезвонить</option>
+            <option value="Готов заключить договор">Готов заключить договор</option>
+            <option value="Думает">Думает</option>
+        </select>
+    </div>
+    <button type="submit">Add Event</button>
+</form>

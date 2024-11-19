@@ -1,0 +1,15 @@
+﻿﻿@using System.Linq
+@model CRMSystem.ViewModels.ClientListViewModel
+
+@foreach (var client in Model.Clients)
+{
+    <div>
+        <h4>@client.Name</h4>
+        <p>@client.Email</p>
+        <p>@Html.ActionLink("Edit", "Edit", new { id = client.Id })</p>
+        <p>@Html.ActionLink("Delete", "Delete", new { id = client.Id })</p>
+        <p>@Html.ActionLink("View Events", "Events", new { clientId = client.Id })</p>
+    </div>
+}
+
+@Html.PartialAsync("_Paging", Model.PagingInfo)

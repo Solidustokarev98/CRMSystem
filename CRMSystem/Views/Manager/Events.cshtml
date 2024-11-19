@@ -1,0 +1,11 @@
+﻿@model IEnumerable<CRMSystem.Models.Event>
+
+@foreach (var crmEvent in Model)
+{
+    <div>
+        <h4>@crmEvent.Type</h4>
+        <p>@crmEvent.Description</p>
+        <p>@crmEvent.Result</p>
+        <p>@crmEvent.FollowUpOption</p>
+    </div>
+}
